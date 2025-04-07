@@ -1,6 +1,5 @@
 //{ Driver Code Starts
 #include <bits/stdc++.h>
-
 using namespace std;
 
 
@@ -9,28 +8,19 @@ using namespace std;
 // User function template for C++
 class Solution {
   public:
-    // Function returns the second largest elements
-    int getSecondLargest(vector<int> &arr) {
-        int max1 = 0;
-        int max2 = 0;
-        if (arr.size()<2) return -1;
-        for (int num : arr){
-            if (num>max1){
-                max2 = max1;
-                max1 = num;
-            }
-            else if(num>max2 && num!=max1){
-                max2=num;
+    void pushZerosToEnd(vector<int>& arr) {
+        int count=0;
+        for (int i=0;i<arr.size();i++){
+            if (arr[i]!=0){
+                swap(arr[i],arr[count]);
+                count++;
             }
         }
-        if (max2==0) return -1;
-        else return max2;
     }
 };
 
 
 //{ Driver Code Starts.
-
 int main() {
     int t;
     cin >> t;
@@ -45,11 +35,14 @@ int main() {
             arr.push_back(number);
         }
         Solution ob;
-        int ans = ob.getSecondLargest(arr);
-        cout << ans << endl;
+        int n = arr.size();
+        ob.pushZerosToEnd(arr);
+        for (int i = 0; i < n; i++) {
+            cout << arr[i] << " ";
+        }
+        cout << "\n";
         cout << "~" << endl;
     }
     return 0;
 }
-
 // } Driver Code Ends
