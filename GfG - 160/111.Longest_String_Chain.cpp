@@ -1,5 +1,5 @@
 /*
-Question Link: 
+Question Link: https://www.geeksforgeeks.org/batch/gfg-160-problems/track/dynamic-programming-gfg-160/problem/longest-string-chain
 */
 
 class Solution {
