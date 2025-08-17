@@ -1,3 +1,7 @@
+/*
+Question Link: https://www.geeksforgeeks.org/batch/gfg-160-problems/track/graph-gfg-160/problem/rotten-oranges2536
+*/
+
 //{ Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;
